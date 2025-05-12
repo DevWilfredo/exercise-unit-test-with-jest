@@ -12,12 +12,12 @@ const fromEuroToDollar = function(valueInEuro) {
 }
 const fromDollarToYen  = function(valueInDollar) {
     //Convertir Dolares a euros
-    let valueInYen = valueInDollar / 156.5;
-    return parseFloat(valueInYen.toFixed(4));
+    let euros = valueInDollar / 1.07;
+    return parseFloat((euros*156.5).toFixed(4));
 }
 const fromYenToPound = function(valueInYen) {
-    let valueInPounds = (valueInYen * 0.87)/156.5;
-    return parseFloat(valueInPounds.toFixed(4));
+    let euros = valueInYen / 156.5;
+    return parseFloat((euros*0.87).toFixed(4));
 }
 
 // Solo un registro en consola para nosotros
